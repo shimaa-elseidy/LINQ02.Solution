@@ -167,6 +167,32 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Aggregate Operators - Immediate Execution
+            // count - sum - max - min - avg
+            // var output = ProductList.Count();// 77
+            //var output = ProductList.Count( p => p.UnitsInStock == 0);//5 empty in stock
+            //var output = ProductList.Where(p => p.UnitsInStock == 0).Count();//5 empty in stock
+            //var output = ProductList.Sum(p => p.UnitPrice);  // 2222.7100
+            //var output = ProductList.Sum(p => p.UnitsInStock); // 3180
+            //var output = ((float)ProductList.Average(p => p.UnitPrice));// 28.866363636363636363636363636
+            //var output = ((int)ProductList.Average(p => p.UnitPrice));// 28
+            //var output = ProductList.Max();// May throw exception ==>  At least one object must implement IComparable. so i did implemintation l IComparable<Product>
+            //var output = ProductList.Max(p => p.UnitPrice); // 263.5000
+            //var output = ((int)ProductList.Max(p => p.UnitPrice)); // 263
+
+            //var output = ProductList.Max(new ProductComparerUnitInStock());
+            //var output = ProductList.MaxBy(p => p.UnitsInStock);
+
+            //var output = ProductList.Min();
+            //var output = ProductList.MinBy(p => p.UnitPrice);
+            //var output = ProductList.Min(new ProductComparerUnitInStockByName());
+
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~Aggrigate operator~~~~~~~~~~~~~~~~~~~~~~
+            //List<string> strings = new List<string>() { "A", "B", "C", "D" };
+            //var output = strings.Aggregate((S01,S02) => S01 + S02);     // ABCD
+            //var output = strings.Aggregate((S01,S02) => $"{S01} {S02}");// A B C D
+            //Console.WriteLine(output);
+            #endregion
         }
     }
 }
