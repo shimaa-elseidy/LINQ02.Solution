@@ -86,6 +86,37 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Ordering Operators
+            // Sorting :: OrderBy() ==>[Differd]
+            //var output = ProductList.OrderBy(P => P.UnitsInStock)
+            //                        .Select(p=>new { p.ProductName, p.Category });
+            //var output = ProductList.OrderByDescending(P => P.UnitsInStock)
+            //                        .ThenBy(p => p.UnitPrice)
+            //                        .Select(p => new { p.ProductName, p.UnitPrice, p.UnitsInStock });
+            //var output = ProductList.OrderByDescending(P => P.UnitsInStock)
+            //                       .ThenByDescending(p => p.UnitPrice)
+            //                       .Select(p => new { p.ProductName, p.UnitPrice, p.UnitsInStock });
+
+            //var output = ProductList.Where(p=>p.Category == "Meat/Poultry"  && p.UnitsInStock > 0)
+            //                        .OrderBy(P => P.UnitsInStock)
+            //                        .ThenByDescending(p => p.UnitPrice)
+            //                        .Select(p => new { p.ProductName, p.UnitPrice, p.UnitsInStock });
+
+            // NOTE :: must use ThenBy after OrderBy direct 
+
+            //var output = from p in ProductList
+            //             where p.Category == "Meat/Poultry" && p.UnitsInStock > 0
+            //             orderby p.UnitsInStock , p.UnitPrice descending
+            //             select new
+            //             { p.ProductName, p.UnitPrice, p.UnitsInStock };
+
+
+            //var output = ProductList.Reverse<Product>();
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
