@@ -204,6 +204,20 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Generation Operators
+            // Must be used as class member method to call it through "Enumrable"
+            // Range - Empty - Repeat
+            //var output = Enumerable.Range(1, 100);
+            //var output = Enumerable.Empty<Product>().ToList(); // generate sequence empty from specific sequence
+
+            //output.Add(new Product() { ProductName = "suchi" });
+            //output.Add(new Product() { ProductName = "spaghti" });
+            //var output = Enumerable.Repeat(ProductList[0], 3);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
