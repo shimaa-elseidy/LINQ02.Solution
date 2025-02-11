@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Security.Cryptography;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static Assignment.ListGenerator;
@@ -77,6 +78,16 @@ namespace Assignment
             //               select x ).Skip(1).FirstOrDefault();
 
             //Console.WriteLine(output.HasValue ? output.Value.ToString() : "null");
+            #endregion
+            #region LINQ - Aggregate Operators
+            // 1.Uses Count to get the number of odd numbers in the array
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            // By Fluent Syntax
+            //int oddCount = Arr.Count(x => x % 2 != 0);
+            // By query Syntax
+            //var oddCount = (from p in Arr
+            //               select p).Count(x => x % 2 != 0);
+            //Console.WriteLine(oddCount); 
             #endregion
         }
     }
