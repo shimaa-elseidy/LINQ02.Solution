@@ -42,6 +42,50 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Transformation Operators - Select, SelectMany
+            // Select - SelectMany [Differd]
+            // By Fluent Syntax
+            //   var output = ProductList.Select(p => p);
+            //   var output = ProductList.Select(p => p.ProductName);
+
+            // By Query Expression
+            //var output = from P in ProductList
+            //             select P;
+            //var output = from P in ProductList
+            //             select P.ProductName;
+
+            //var output = ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Seafood")
+            //                        .Select(P => P.ProductName);
+
+            //var output = ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Seafood")
+            //                        .Select( P => new 
+            //                               { P.ProductName ,
+            //                                 P.Category , 
+            //                                 OldPrice=P.UnitPrice , 
+            //                                 NewPrice = P.UnitPrice - P.UnitPrice *.1m
+            //                               });
+
+            //var output = from p in ProductList
+            //             where p.UnitsInStock > 0 && p.Category == "Seafood"
+            //             select new 
+            //                    {  name = p.ProductName,
+            //                       category = p.Category,
+            //                       OldPrice = p.UnitPrice,
+            //                       NewPrice = p.UnitPrice - p.UnitPrice *.1m  } ;
+            // var output = CustomerList.Select(p => p.Orders);// name space
+
+            // use SelectMany ==> if one of the property is sequence 
+            //var output = CustomerList.SelectMany(p => p.Orders); 
+            //var output = from c in CustomerList
+            //             from o in c.Orders
+            //             select o;
+            // Indexed Select:: Valid in Fluent Syntax Can't be written using query syntax (query expression)
+            //var output = ProductList.Select((p, i) =>new {i, p.ProductName }).Where(p => p.i < 5);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
