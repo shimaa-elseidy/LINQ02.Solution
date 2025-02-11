@@ -1,4 +1,6 @@
-﻿using System.Xml.Linq;
+﻿using System.Diagnostics;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static Assignment.ListGenerator;
 namespace Assignment
 {
@@ -41,7 +43,41 @@ namespace Assignment
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region LINQ - Element Operators
 
+            // 1. Get first Product out of Stock 
+            // Fluent Syntax  
+            // var output = ProductList.FirstOrDefault(p => p.UnitsInStock == 0);
+            // Query Syntax  
+            //var output = (from p in ProductList
+            //              where p.UnitsInStock == 0
+            //              select p)
+            //              .FirstOrDefault();
+            // May Through Exception :: NullReferenceException
+            //string message = output == null ? $"First out of stock product: {output.ProductName}" : $"First out of stock product: {output.ProductName}";
+            //Console.WriteLine(message);
+
+            // 2.Return the first product whose Price > 1000, unless there is no match, in which case null is returned.
+            // Fluent Syntax
+            //var output = ProductList.FirstOrDefault(p => p.UnitPrice > 1000);
+            // Query Syntax 
+            //var output = (from p in ProductList
+            //              where p.UnitPrice>1000
+            //              select p).FirstOrDefault();
+            //Console.WriteLine(output?.UnitPrice.ToString()?? "null");
+
+            // 3.Retrieve the second number greater than 5
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            // Fluent Syntax  
+            //int? output = Arr.Where(x => x > 5).Skip(1).FirstOrDefault();
+            // Query Syntax  
+            //int? output = (from   x in Arr
+            //               where  x > 5
+            //               select x ).Skip(1).FirstOrDefault();
+
+            //Console.WriteLine(output.HasValue ? output.Value.ToString() : "null");
+            #endregion
         }
     }
 }
