@@ -379,6 +379,52 @@ namespace Assignment
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region LINQ - Partitioning Operators
+            // 1.Get the first 3 orders from customers in Washington
+            //var result = CustomerList.Where(c => c.Address == "Washington")  
+            //                         .SelectMany(c => c.Orders)  
+            //                         .Take(3);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            // 2.Get all but the first 2 orders from customers in Washington.
+            //var result = CustomerList.Where(c => c.Region == "Washington")
+            //                                          .SelectMany(c => c.Orders)
+            //                                           .Skip(2);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            // 3.Return elements starting from the beginning of the array until a number is hit that is less than its position in the array.
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var output = numbers.TakeWhile((number, index) => number >= index);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine( item);
+            //}
+
+            //4.Get the elements of the array starting from the first element divisible by 3.
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var output = numbers.SkipWhile(number => number % 3 != 0);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //5.Get the elements of the array starting from the first element less than its position.
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var output = numbers.SkipWhile((number, index) => number >= index);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
             // 11 // 6 , 7   // 6.Select all orders where the order total is less than 500.00.
             // var cheapOrders = CustomerList.Where(p => p.Orders == 500.00m);
 
