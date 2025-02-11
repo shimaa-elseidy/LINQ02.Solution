@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Numerics;
@@ -423,6 +426,36 @@ namespace Assignment
             //foreach (var item in output)
             //{
             //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region LINQ - Quantifiers
+            //1.Determine if any of the words in dictionary_english.txt(Read dictionary_english.txt into Array of String First) contain the substring 'ei'.
+            //string[] words = File.ReadAllLines("dictionary_english.txt");
+            //bool result = words.Any(word => word.Contains("ei"));
+            //Console.WriteLine(result);// true
+
+
+            //2.Return a grouped a list of products only for categories that have at least one product that is out of stock.
+            //var result = ProductList.GroupBy(p => p.Category)
+            //                        .Where  (g => g.Any(p => p.UnitsInStock == 0));
+            //foreach (var categoryGroup in result)
+            //{
+            //    Console.WriteLine($"Category: {categoryGroup.Key}");
+            //    foreach (var product in categoryGroup)
+            //    {
+            //        Console.WriteLine($"  - {product.ProductName}: {product.UnitsInStock}");
+            //    }
+            //}
+            //3.Return a grouped a list of products only for categories that have all of their products in stock.
+            //var categoriesWithAllInStock = ProductList.GroupBy(p => p.Category)
+            //                                          .Where(g => g.All(p => p.UnitsInStock > 0));
+            //foreach (var categoryGroup in categoriesWithAllInStock)
+            //{
+            //    Console.WriteLine($"Category: {categoryGroup.Key}");
+            //    foreach (var product in categoryGroup)
+            //    {
+            //        Console.WriteLine($"  - {product.ProductName}: {product.UnitsInStock}");
+            //    }
             //}
             #endregion
             // 11 // 6 , 7   // 6.Select all orders where the order total is less than 500.00.
