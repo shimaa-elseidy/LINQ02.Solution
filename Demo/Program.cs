@@ -307,6 +307,26 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Partitioning Operators
+            // [ Partitioning Operators :: Take - TakeLast - Skip - SkipLast - TakeWhile - SkipWhile ] ====> to make pagination
+            //var output = ProductList.Where(p=>p.UnitsInStock == 0).Take(2);
+            //var output = ProductList.TakeLast(3);
+            //var output = ProductList.Where(p => p.UnitsInStock == 0).TakeLast(2);
+            //var output = ProductList.Skip(3); // hay3ml skip l awel 3
+            //var output = ProductList.Skip(3).Take(10);
+            //var output = ProductList.SkipLast(3);// hay3ml skip l a5er 3
+            //int[] ints = {9, 6, 4,5,6,7,8 };
+            //var output = ints.TakeWhile(p => p % 3 == 0); // 9 6
+            // awel ama ykoon b false by return el seuence even if there is anumber in sequence match condition
+            //var output = ints.SkipWhile(p => p % 3 == 0); // 4 5 6 7 8
+            //int[] nums = {9 ,4, 1,2,3,4,5};
+            //var output = nums.TakeWhile((N, I) => N > I);
+            //var output = nums.SkipWhile((N , I) => N > I ); 
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
