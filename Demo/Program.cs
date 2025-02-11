@@ -265,6 +265,48 @@
              4 ---> D
              */
             #endregion
+            #region Grouping Operator
+            //var output = ProductList.GroupBy<Product,string>( p => p.Category );
+            //var output = from P in ProductList
+            //             group P by P.Category;
+            //var output = from P in ProductList
+            //             where P.UnitsInStock  > 0
+            //             group P by P.Category;
+            //  Query syntax ends with select or group by
+            //  restart query
+            //var output = from P in ProductList
+            //             where P.UnitsInStock > 0
+            //             group P by P.Category
+            //             into category
+            //             where category.Count() > 12
+            //             select category;
+
+            //foreach (var category in output)
+            //{
+            //    Console.WriteLine(category.Key);
+            //    foreach (var product in category)
+            //    {
+            //        Console.WriteLine($"......{product} ");
+            //    }
+            //}
+
+            //var output = from   P in ProductList
+            //             where  P.UnitsInStock > 0
+            //             group  P by P.Category
+            //             into   category
+            //             where  category.Count() > 1
+            //             select new { CategoryName = category.Key , Count = category.Count()}; // { CategoryName = Confections, Count = 13 }
+
+            //var output = ProductList.Where  (p => p.UnitsInStock > 0)
+            //                        .GroupBy(p => p.Category)
+            //                        .OrderByDescending(c => c.Count())
+            //                        .Where  (c => c.Count() > 5)
+            //                        .Select (c => new { CategoryName = c.Key, Count = c.Count() });
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
