@@ -250,6 +250,21 @@
             //var result = seq01.Contains(2);// true
             //Console.WriteLine(result);
             #endregion
+            #region Zip Operator
+            //List<string> strings = new List<string>() { "A", "B", "C", "D" };
+            //List<int> ints       = new List<int>()    { 1, 2, 3, 4 , 4 , 5 };
+            //var output = strings.Zip(ints, (s, i) => $"{i} ---> {s} ");
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            /*
+             1 ---> A
+             2 ---> B
+             3 ---> C
+             4 ---> D
+             */
+            #endregion
         }
     }
 }
