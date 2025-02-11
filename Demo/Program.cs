@@ -327,6 +327,31 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Let and Into
+            // Let and Into ==> in query syntax
+            //List<string> list = new List<string>() { "Ahmed" ,"Ali","osama","mohamed","mona","Aya"}; //VOWEL ==> aioueAIOUE
+            //var output = Regex.Replace("Ahmed", "[aioueAIOUE]",string.Empty);
+            //var output = from Name in list 
+            //             select Regex.Replace(Name , "[aioueAIOUE]",string.Empty); // hmd l sm mhmd mn y
+            //var output = from Name in list
+            //             select Regex.Replace(Name, "[aA]", string.Empty); // hmed li osm mohmed mon y
+            //var output = from Name in list
+            //             select Regex.Replace(Name, "[a]", string.Empty); // Ahmed Ali osm mohmed mon Ay
+            //var output = from Name in list
+            //             select Regex.Replace(Name, "[aioueAIOUE]", string.Empty)
+            //             into NoVowelSequence // into ==> to restart  query with introducing new range
+            //             where NoVowelSequence.Length > 3 
+            //             select NoVowelSequence; // mhmd
+            //var output = from Name in list
+            //             let NoVowelSequence = Regex.Replace(Name, "[aioueAIOUE]", string.Empty)
+            //             // Let ==> continue query with adding new range variable 
+            //             where NoVowelSequence.Length > 3
+            //             select NoVowelSequence; // mhmd
+            //foreach (var item in output)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+            #endregion
         }
     }
 }
