@@ -218,6 +218,21 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Set operator
+            // set operator - union family
+            // Union - Union All - Intersect - Except
+            //var S01 = Enumerable.Range(1,100);
+            //var S02 = Enumerable.Range(50, 149);
+            //var result = S01.Union(S02); // Like union in SQL without dublication
+            //var result = S01.Concat(S02); // Like union in SQL with dublication
+            //result = result.Distinct(); // remove dublication
+            //var result = S01.Intersect(S02); 
+            //var result = S01.Except(S02);
+            //foreach (var item in result) 
+            //{
+            //    Console.Write($"{item} ");
+            //}
+            #endregion
         }
     }
 }
