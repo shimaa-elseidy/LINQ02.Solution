@@ -193,6 +193,17 @@
             //var output = strings.Aggregate((S01,S02) => $"{S01} {S02}");// A B C D
             //Console.WriteLine(output);
             #endregion
+            #region Casting Operators - Immediate Execution 
+            // List<Product> list =( List<Product>) ProductList.Where(p => p.UnitsInStock == 0); // In-Valid :: Unable to cast object
+            //List<Product> list = ProductList.Where(p => p.UnitsInStock == 0).ToList(); // use ToList() to return sequence to list
+            //Product[] array = ProductList.Where(p => p.UnitsInStock == 0).ToArray();
+            //Dictionary<string , Product> keys = ProductList.Where(p => p.UnitsInStock == 0).ToDictionary(p=>p.ProductName);
+            //HashSet<Product> HS = ProductList.Where(p => p.UnitsInStock == 0).ToHashSet();
+            //foreach (var item in HS)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
