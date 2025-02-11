@@ -337,8 +337,50 @@ namespace Assignment
             //// 7.Select all orders where the order was made in 1998 or later.
             //var oldOrders = Order.Where(o => o.orderDate.Year >= 1998);
             #endregion
+            #region LINQ - Set Operators
+            // 1.Find the unique Category names from Product List
+            //var result = ProductList.DistinctBy(x => x.Category);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Category);
+            //}
+
+
+            // 2.Produce a Sequence containing the unique first letter from both product and customer names.
+            //var result = ProductList.Select(p => p.ProductName.Substring(0, 1)).Union(CustomerList.Select(c => c.CustomerName.Substring(0, 1))).Distinct();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            // 3.Create one sequence that contains the common first letter from both product and customer names.
+            //var result = ProductList.Select(p => p.ProductName.Substring(0, 1)).Intersect(CustomerList.Select(c => c.CustomerName.Substring(0, 1))).Distinct();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            // 4.Create one sequence that contains the first letters of product names that are not also first letters of customer names.
+            //var productFirstLetters  = ProductList.Select (p => p.ProductName.Substring(0, 1));
+            //var customerFirstLetters = CustomerList.Select(c => c.CustomerName.Substring(0, 1));
+            //var productOnlyFirstLetters = productFirstLetters.Except(customerFirstLetters).Distinct();
+            //foreach (var item in productOnlyFirstLetters)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            // 5.Create one sequence that contains the last Three Characters in each name of all customers and products, including any duplicates
+            //var customerLastThree = CustomerList.Select(c => c.CustomerName.Length >= 3 ? c.CustomerName.Substring(c.CustomerName.Length - 3) : c.CustomerName);
+            //var productLastThree  = ProductList.Select(p => p.ProductName.Length >= 3 ? p.ProductName.Substring(p.ProductName.Length - 3) : p.ProductName);
+            //var result = customerLastThree.Concat(productLastThree);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
             // 11 // 6 , 7   // 6.Select all orders where the order total is less than 500.00.
-           // var cheapOrders = CustomerList.Where(p => p.Orders == 500.00m);
+            // var cheapOrders = CustomerList.Where(p => p.Orders == 500.00m);
 
 
             // 7.Select all orders where the order was made in 1998 or later.
