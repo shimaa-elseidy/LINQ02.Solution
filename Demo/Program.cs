@@ -117,6 +117,56 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Element Operators - Immediate Execution
+            // var output = ProductList.First();
+            // var output = ProductList.Last()
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            //ProductList = new List<Product>(); // make product list empty
+            //var output = ProductList.First();  // May Throw Exception  [Sequence contains no elements]
+            //var output = ProductList.Last();  // May Throw Exception   [Sequence contains no elements]
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            //var output = ProductList.First(p => p.UnitsInStock > 10);
+            //var output = ProductList.Last(p => p.UnitsInStock > 10);
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            //ProductList = new List<Product>();
+            //var output = ProductList.FirstOrDefault();  // LastOrDefault() ==> the same action
+            //Console.WriteLine(output?.ProductName ?? "null" ); // null [? null propagation operator , ?? null coleasing(law b null etb3 null)]
+            //===
+            //ProductList = new List<Product>();
+            //var output = ProductList.FirstOrDefault(new Product() { ProductName = "Default Product" }); // don't throw exception
+            //Console.WriteLine(output.ProductName);// Default Product
+            //var output = ProductList.FirstOrDefault(p => p.UnitsInStock < 0,new Product() { ProductName = "Default Product" }); // don't throw exception
+            //Console.WriteLine(output.ProductName);// Default Product
+
+            //var output = ProductList.ElementAt(0);// may throw exception [index out of range]
+            //var output = ProductList.ElementAtOrDefault(1000);//null
+            //var output = ProductList.Single(); // may through exception ==> Sequence contains more than one element
+            //var output = ProductList.Single(p=>p.UnitsInStock==0); // may through exception ==> Sequence contains more than one matching element
+            //var output = ProductList.SingleOrDefault(); // if sequence empty ==> will return null
+            //ProductList = new List<Product>();
+            //var output = ProductList.SingleOrDefault(p => p.ProductID == 5, new Product { ProductName = "single default" }); // single default
+            //Console.WriteLine(output?.ProductName ?? "null");
+
+            //var output = ProductList.DefaultIfEmpty();
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //ProductList = new List<Product>();
+            //var output = ProductList.DefaultIfEmpty();
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //ProductList = new List<Product>();
+            //var output = ProductList.DefaultIfEmpty(new Product() { ProductName = "Default" });
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
         }
     }
 }
