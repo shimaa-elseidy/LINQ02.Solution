@@ -233,6 +233,23 @@
             //    Console.Write($"{item} ");
             //}
             #endregion
+            #region Quantifier Operators - Return Boolean
+            // Any - All - sequenceEqual - contains
+            //var seq01 = Enumerable.Range(1 , 100);
+            //var seq02 = Enumerable.Range(50, 100);
+            // Any() ==> return true if there are one elemnt in the sequence [in sequence or match condition]
+            //var result = seq01.Any();// true
+            //var result = seq01.Any( N => N%2 == 0);
+            //var result = ProductList.Any();// true
+            //var result = ProductList.Any( p => p.UnitsInStock == 0 );// true
+
+            //All() ==> return true if all elemnts in the sequence in sequence  match condition or sequence is empty
+            //var result = ProductList.All(p => p.UnitsInStock == 0);// false
+            //var result = ProductList.All(p => p.UnitPrice > 0); // true
+            //var result = seq01.SequenceEqual(seq02);//false
+            //var result = seq01.Contains(2);// true
+            //Console.WriteLine(result);
+            #endregion
         }
     }
 }
