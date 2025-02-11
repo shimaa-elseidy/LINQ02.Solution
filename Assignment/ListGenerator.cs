@@ -54,7 +54,7 @@ namespace Assignment
         public override string ToString()
             => $"{CustomerID}, {CustomerName}, {Address}, {City}, {Region}, {PostalCode}, {Country}, {Phone}, {Fax}";
     }
-    class Order
+    class  Order
     {
 
         public int OrderID { get; set; }

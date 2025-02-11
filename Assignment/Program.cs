@@ -5,6 +5,7 @@ using System.Diagnostics.Metrics;
 using System.Numerics;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -265,15 +266,83 @@ namespace Assignment
             // }
 
             //  8.Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
-                //string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-                //var output = Arr.Where(s=>s.Length>1 && s[1] == 'i').Reverse();
-                //foreach (var item in output)
-                //{
-                //   Console.WriteLine(item);
-                //}
+            //string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+            //var output = Arr.Where(s=>s.Length>1 && s[1] == 'i').Reverse();
+            //foreach (var item in output)
+            //{
+            //   Console.WriteLine(item);
+            //}
 
             #endregion
-            // 11
+            #region LINQ – Transformation Operators
+            // 1. Return a sequence of just the names of a list of products.
+            //var result = ProductList.Select(x => x.ProductName);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item); 
+            //}
+
+
+            // 2. Produce a sequence of the uppercase and lowercase versions of each word in the original array (Anonymous Types).
+            //string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+            //var output = words.Select(x => new { lowercase = x.ToLower(), uppercase = x.ToUpper() });
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            // 3.Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
+            //var productProperties = ProductList.Select(p => new
+            //{
+            //    Name = p.ProductName,
+            //    Price = p.UnitPrice, // UnitPrice renamed to Price  
+            //    category = p.Category
+            //});
+
+            //foreach (var item in productProperties)
+            //{
+            //    Console.WriteLine($"Name: {item.Name}, Price: {item.Price}, Category: {item.category}");
+            //}
+
+            // 4.Determine if the value of int in an array matches their position in the array.
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var output = Arr.Where((arr, i) => arr.Equals(i));
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            // Another Way
+            //int[] Arr = { 5, 4, 1, 3, 9, 6, 7, 2, 0 };
+            //var matchesPosition = Arr.Select((value, index) => new{Number = value,Index = index, Matches = (value == index)});
+            //foreach (var item in matchesPosition)
+            //{
+            //    Console.WriteLine($"Number: {item.Number}, Index: {item.Index}, Matches: {item.Matches}");
+            //}
+
+
+            // 5.Returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
+            //int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            //int[] numbersB = { 1, 3, 5, 7, 8 };
+            //var   pairs    = numbersA.SelectMany( a => numbersB.Where( b => a < b ) , (a, b) => new { a, b } );
+            //foreach (var pair in pairs)
+            //{
+            //   Console.WriteLine($"{pair.a} is less than {pair.b}");
+            //}
+
+
+            //// 6.Select all orders where the order total is less than 500.00.
+            //var cheapOrders = CustomerList.Where(p => p.Orders == 500.00m);
+
+
+            //// 7.Select all orders where the order was made in 1998 or later.
+            //var oldOrders = Order.Where(o => o.orderDate.Year >= 1998);
+            #endregion
+            // 11 // 6 , 7   // 6.Select all orders where the order total is less than 500.00.
+           // var cheapOrders = CustomerList.Where(p => p.Orders == 500.00m);
+
+
+            // 7.Select all orders where the order was made in 1998 or later.
+            //var oldOrders = Order.Where(o => o.orderDate.Year >= 1998);
         }
-        }
+    }
 }
